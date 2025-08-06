@@ -1,0 +1,33 @@
+# Python virtual environments
+.venv/
+.venv-wsl/
+.venv-unix/
+
+# Python bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# VS Code settings
+.vscode/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Environment files
+.env
+
+# Log files
+*.log
+
+# Test outputs
+*.out
+*.tmp
+
+# Gemini CLI app cache or temp
+.cache/
