@@ -32,10 +32,10 @@ def check_python():
     """Check Python version"""
     version = sys.version_info
     if version.major < 3 or (version.major == 3 and version.minor < 6):
-        print("❌ Python 3.6 or higher is required")
+        print("Python 3.6 or higher is required")
         return False
     
-    print(f"✅ Python {version.major}.{version.minor}.{version.micro} detected")
+    print(f"Python {version.major}.{version.minor}.{version.micro} detected")
     return True
 
 
@@ -43,17 +43,17 @@ def check_api_key():
     """Check if API key is set"""
     api_key = os.getenv('GEMINI_API_KEY')
     if api_key:
-        print("✅ GEMINI_API_KEY is set")
+        print("GEMINI_API_KEY is set")
         print(f"   Key length: {len(api_key)} characters")
         return True
     else:
-        print("❌ GEMINI_API_KEY is not set")
+        print("GEMINI_API_KEY is not set")
         return False
 
 
 def setup_environment(env_type):
     """Set up the environment based on the detected type"""
-    print(f"\n🔧 Setting up environment for {env_type}...")
+    print(f"\nSetting up environment for {env_type}...")
     
     if env_type == "windows":
         return setup_windows()
@@ -76,7 +76,7 @@ def setup_windows():
         result = subprocess.run([sys.executable, "-m", "venv", ".venv"], 
                               capture_output=True, text=True)
         if result.returncode != 0:
-            print(f"❌ Failed to create virtual environment: {result.stderr}")
+            print(f"Failed to create virtual environment: {result.stderr}")
             return False
     
     # Install packages
@@ -86,11 +86,11 @@ def setup_windows():
         result = subprocess.run([pip_path, "install", "requests"], 
                               capture_output=True, text=True)
         if result.returncode != 0:
-            print(f"❌ Failed to install requests: {result.stderr}")
+            print(f"Failed to install requests: {result.stderr}")
             return False
     
-    print("✅ Windows setup complete!")
-    print("\n📋 Usage:")
+    print("Windows setup complete!")
+    print("\nUsage:")
     print("   .venv\\Scripts\\python.exe gemini_cli.py")
     print("   .\\gemini.bat \"Your prompt here\"")
     return True
@@ -106,7 +106,7 @@ def setup_wsl():
         result = subprocess.run(["python3", "-m", "venv", ".venv-wsl"], 
                               capture_output=True, text=True)
         if result.returncode != 0:
-            print(f"❌ Failed to create virtual environment: {result.stderr}")
+            print(f"Failed to create virtual environment: {result.stderr}")
             return False
     
     # Install packages
@@ -116,7 +116,7 @@ def setup_wsl():
         result = subprocess.run([pip_path, "install", "requests"], 
                               capture_output=True, text=True)
         if result.returncode != 0:
-            print(f"❌ Failed to install requests: {result.stderr}")
+            print(f"Failed to install requests: {result.stderr}")
             return False
     
     # Make scripts executable
@@ -125,8 +125,8 @@ def setup_wsl():
         if os.path.exists(script):
             os.chmod(script, 0o755)
     
-    print("✅ WSL setup complete!")
-    print("\n📋 Usage:")
+    print("WSL setup complete!")
+    print("\nUsage:")
     print("   source .venv-wsl/bin/activate")
     print("   python gemini_cli.py")
     print("   ./gemini.sh \"Your prompt here\"")
@@ -143,7 +143,7 @@ def setup_unix():
         result = subprocess.run(["python3", "-m", "venv", ".venv-unix"], 
                               capture_output=True, text=True)
         if result.returncode != 0:
-            print(f"❌ Failed to create virtual environment: {result.stderr}")
+            print(f"Failed to create virtual environment: {result.stderr}")
             return False
     
     # Install packages
@@ -153,11 +153,11 @@ def setup_unix():
         result = subprocess.run([pip_path, "install", "requests"], 
                               capture_output=True, text=True)
         if result.returncode != 0:
-            print(f"❌ Failed to install requests: {result.stderr}")
+            print(f"Failed to install requests: {result.stderr}")
             return False
     
-    print("✅ Unix setup complete!")
-    print("\n📋 Usage:")
+    print("Unix setup complete!")
+    print("\nUsage:")
     print("   source .venv-unix/bin/activate")
     print("   python gemini_cli.py")
     return True
@@ -165,7 +165,7 @@ def setup_unix():
 
 def print_api_key_instructions(env_type):
     """Print API key setup instructions"""
-    print("\n🔑 API Key Setup:")
+    print("\nAPI Key Setup:")
     print("1. Get your API key from: https://makersuite.google.com/app/apikey")
     print("2. Set the environment variable:")
     
@@ -184,12 +184,12 @@ def print_api_key_instructions(env_type):
 
 def main():
     """Main setup function"""
-    print("🚀 Gemini CLI App Setup")
+    print("Gemini CLI App Setup")
     print("=" * 50)
     
     # Detect environment
     env_type = detect_environment()
-    print(f"🔍 Detected environment: {env_type}")
+    print(f"Detected environment: {env_type}")
     
     # Check Python version
     if not check_python():
@@ -200,17 +200,17 @@ def main():
     
     # Setup environment
     if setup_environment(env_type):
-        print("\n🎉 Setup completed successfully!")
+        print("\nSetup completed successfully!")
         
         if not api_key_set:
             print_api_key_instructions(env_type)
-            print("\n⚠️  Don't forget to set your API key before using the app!")
+            print("\nDon't forget to set your API key before using the app!")
         else:
-            print("\n✅ You're ready to use the Gemini CLI app!")
+            print("\nYou're ready to use the Gemini CLI app!")
             
-        print(f"\n📖 See README.md for detailed usage instructions")
+        print(f"\nSee README.md for detailed usage instructions")
     else:
-        print("\n❌ Setup failed!")
+        print("\nSetup failed!")
         sys.exit(1)
 
 
