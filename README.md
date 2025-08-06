@@ -1,4 +1,4 @@
-A simple Python CLI application that sends prompts to the Google Gemini AI API and displays the responses.
+A Python CLI application that sends prompts to the Google Gemini AI API and displays the responses.
 
 ## Features
 
