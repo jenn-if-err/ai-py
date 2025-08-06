@@ -31,10 +31,10 @@ def send_prompt_to_gemini(prompt: str, api_key: str) -> Optional[str]:
     Returns:
         The AI response or None if there was an error
     """
-    # Gemini API endpoint (using the current API version and model)
+    # gemini API endpoint 
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     
-    # Prepare the request payload
+    #request payload
     payload = {
         "contents": [
             {
@@ -52,14 +52,12 @@ def send_prompt_to_gemini(prompt: str, api_key: str) -> Optional[str]:
     }
     
     try:
-        # Send POST request with HTTPS
         response = requests.post(url, json=payload, headers=headers, timeout=30)
-        response.raise_for_status()  # Raise an exception for bad status codes
+        response.raise_for_status() 
         
-        # Parse the JSON response
         data = response.json()
         
-        # Extract the generated text from the response
+        # extract the generated text from the response
         if 'candidates' in data and len(data['candidates']) > 0:
             if 'content' in data['candidates'][0] and 'parts' in data['candidates'][0]['content']:
                 return data['candidates'][0]['content']['parts'][0]['text']
@@ -82,7 +80,7 @@ def read_prompt_from_stdin() -> Optional[str]:
     """Read the prompt from stdin"""
     try:
         if sys.stdin.isatty():
-            # Interactive mode - prompt user with platform-specific instructions
+            # prompt user with platform-specific instructions
             if os.name == 'nt':  # Windows
                 print("Enter your prompt (press Ctrl+Z then Enter on Windows to finish):")
             else:  # Unix/Linux/WSL
@@ -103,20 +101,19 @@ def read_prompt_from_stdin() -> Optional[str]:
 
 
 def main():
-    """Main function to run the CLI app"""
-    # Get API key
+
     api_key = get_api_key()
     if not api_key:
         sys.exit(1)
     
-    # Read prompt from stdin
+    # read prompt from stdin
     prompt = read_prompt_from_stdin()
     if not prompt:
         sys.exit(1)
     
     print("Sending prompt to Gemini AI...", file=sys.stderr)
     
-    # Send prompt to Gemini API
+    # send prompt to Gemini API
     response = send_prompt_to_gemini(prompt, api_key)
     if response:
         print("\n" + "="*50)
