@@ -54,18 +54,18 @@ This app uses the Google Gemini 1.5 Flash model via the REST API endpoint:
 
 #### Interactive Mode
 ```bash
-python3 gemini_cli.py
+python3 main.py
 ```
 Type your prompt and press Ctrl+D to send.
 
 #### Pipe Input
 ```bash
-echo "What is the capital of France?" | python3 gemini_cli.py
+echo "What is the capital of France?" | python3 main.py
 ```
 
 #### File Input
 ```bash
-cat prompt.txt | python3 gemini_cli.py
+cat prompt.txt | python3 main.py
 ```
 
 #### Using the Bash Script
@@ -79,11 +79,11 @@ chmod +x gemini.sh
 ## Examples
 ```bash
 # Simple question
-echo "Explain quantum computing in simple terms" | python3 gemini_cli.py
+echo "Explain quantum computing in simple terms" | python3 main.py
 # Analysis
-cat data.txt | python3 gemini_cli.py
+cat data.txt | python3 main.py
 # Multiple lines
-cat << EOF | python3 gemini_cli.py
+cat << EOF | python3 main.py
 Write a Python script that:
 1. Reads a CSV file
 2. Performs basic data analysis
@@ -101,7 +101,7 @@ EOF
 chmod +x test_env_wsl.sh
 ./test_env_wsl.sh
 # Test the app
-echo "Hello, Gemini!" | python3 gemini_cli.py
+echo "Hello, Gemini!" | python3 main.py
 ```
 
 ---
@@ -129,23 +129,18 @@ echo "Hello, Gemini!" | python3 gemini_cli.py
 
 #### Interactive Mode
 ```powershell
-python gemini_cli.py
+python main.py
 ```
 Type your prompt and press Ctrl+Z then Enter to send.
 
 #### Pipe Input
 ```powershell
-echo "What is the capital of France?" | python gemini_cli.py
+echo "What is the capital of France?" | python main.py
 ```
 
 #### File Input
 ```powershell
-Get-Content prompt.txt | python gemini_cli.py
-```
-
-#### Using the Batch Script
-```powershell
-.\gemini.bat "What is machine learning?"
+Get-Content prompt.txt | python main.py
 ```
 
 ---
@@ -153,11 +148,9 @@ Get-Content prompt.txt | python gemini_cli.py
 ## Examples
 ```powershell
 # Simple question
-echo "Explain quantum computing in simple terms" | python gemini_cli.py
+echo "Explain quantum computing in simple terms" | python main.py
 # Analysis
-Get-Content data.txt | python gemini_cli.py
-# Using batch script
-.\gemini.bat "What are the latest trends in AI?"
+Get-Content data.txt | python main.py
 ```
 
 ---
@@ -167,7 +160,7 @@ Get-Content data.txt | python gemini_cli.py
 # Test environment
 python test_env.py
 # Test the app
-echo "Hello, Gemini!" | python gemini_cli.py
+echo "Hello, Gemini!" | python main.py
 ```
 
 ---

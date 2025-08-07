@@ -23,8 +23,8 @@ source .venv-wsl/bin/activate
 # Check if arguments were provided
 if [ $# -eq 0 ]; then
     # No arguments, read from stdin
-    python gemini_cli.py
+    python main.py
 else
     # Arguments provided, use them as prompt
-    echo "$*" | python gemini_cli.py
+    echo "$*" | python main.py
 fi

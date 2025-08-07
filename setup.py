@@ -91,8 +91,7 @@ def setup_windows():
     
     print("Windows setup complete!")
     print("\nUsage:")
-    print("   .venv\\Scripts\\python.exe gemini_cli.py")
-    print("   .\\gemini.bat \"Your prompt here\"")
+    print("   .venv\\Scripts\\python.exe main.py")
     return True
 
 
@@ -128,7 +127,7 @@ def setup_wsl():
     print("WSL setup complete!")
     print("\nUsage:")
     print("   source .venv-wsl/bin/activate")
-    print("   python gemini_cli.py")
+    print("   python main.py")
     print("   ./gemini.sh \"Your prompt here\"")
     return True
 
@@ -159,7 +158,7 @@ def setup_unix():
     print("Unix setup complete!")
     print("\nUsage:")
     print("   source .venv-unix/bin/activate")
-    print("   python gemini_cli.py")
+    print("   python main.py")
     return True
 
 
