@@ -9,6 +9,7 @@ import sys
 import json
 import requests
 from typing import Optional
+import argparse
 
 
 def get_api_key() -> Optional[str]:
@@ -20,18 +21,8 @@ def get_api_key() -> Optional[str]:
     return api_key
 
 
-def send_prompt_to_gemini(prompt: str, api_key: str) -> Optional[str]:
-    """
-    Send a prompt to the Gemini API and return the response
-    
-    Args:
-        prompt: The user's prompt to send to Gemini
-        api_key: The API key for authentication
-        
-    Returns:
-        The AI response or None if there was an error
-    """
-    # gemini API endpoint 
+def send_prompt_to_gemini_requests(prompt: str, api_key: str) -> Optional[str]:
+    """Send a prompt to the Gemini API using requests and return the response"""
     url = f"https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent?key={api_key}"
     
     #request payload
@@ -76,6 +67,27 @@ def send_prompt_to_gemini(prompt: str, api_key: str) -> Optional[str]:
         return None
 
 
+def send_prompt_to_gemini_genai(prompt: str, api_key: str) -> Optional[str]:
+    """Send a prompt to the Gemini API using google-generativeai and return the response"""
+    try:
+        import google.generativeai as genai
+    except ImportError:
+        print("Error: google-generativeai package is not installed. Please install it with 'pip install google-generativeai'", file=sys.stderr)
+        return None
+    
+    genai.configure(api_key=api_key)
+    try:
+        model = genai.GenerativeModel('gemini-1.5-flash')
+        response = model.generate_content(prompt)
+        if hasattr(response, 'text'):
+            return response.text
+        print("Error: Unexpected response format from genai package", file=sys.stderr)
+        return None
+    except Exception as e:
+        print(f"Error using google-generativeai: {e}", file=sys.stderr)
+        return None
+
+
 def read_prompt_from_stdin() -> Optional[str]:
     """Read the prompt from stdin"""
     try:
@@ -101,20 +113,26 @@ def read_prompt_from_stdin() -> Optional[str]:
 
 
 def main():
+    parser = argparse.ArgumentParser(description="Gemini CLI App")
+    parser.add_argument('--use-genai', action='store_true', help='Use google-generativeai package instead of requests')
+    args = parser.parse_args()
 
     api_key = get_api_key()
     if not api_key:
         sys.exit(1)
-    
+
     # read prompt from stdin
     prompt = read_prompt_from_stdin()
     if not prompt:
         sys.exit(1)
-    
+
     print("Sending prompt to Gemini AI...", file=sys.stderr)
-    
-    # send prompt to Gemini API
-    response = send_prompt_to_gemini(prompt, api_key)
+
+    if args.use_genai:
+        response = send_prompt_to_gemini_genai(prompt, api_key)
+    else:
+        response = send_prompt_to_gemini_requests(prompt, api_key)
+
     if response:
         print("\n" + "="*50)
         print("AI Response:")
