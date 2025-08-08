@@ -115,14 +115,17 @@ def read_prompt_from_stdin() -> Optional[str]:
 def main():
     parser = argparse.ArgumentParser(description="Gemini CLI App")
     parser.add_argument('--use-genai', action='store_true', help='Use google-generativeai package instead of requests')
+    parser.add_argument('--prompt', type=str, help='Prompt to send to Gemini (if not provided, reads from stdin)')
     args = parser.parse_args()
 
     api_key = get_api_key()
     if not api_key:
         sys.exit(1)
 
-    # read prompt from stdin
-    prompt = read_prompt_from_stdin()
+    if args.prompt is not None:
+        prompt = args.prompt.strip()
+    else:
+        prompt = read_prompt_from_stdin()
     if not prompt:
         sys.exit(1)
 
