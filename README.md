@@ -41,7 +41,7 @@ This app uses the Google Gemini 1.5 Flash model via the REST API endpoint:
    sudo apt update
    sudo apt install python3 python3-pip python3-requests
    ```
-   # Or, if you prefer a virtual environment:
+   Or, if you prefer a virtual environment:
    ```bash
    python3 -m venv .venv-wsl
    source .venv-wsl/bin/activate
