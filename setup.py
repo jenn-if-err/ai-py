@@ -91,8 +91,7 @@ def setup_windows():
     
     print("Windows setup complete!")
     print("\nUsage:")
-    print("   .venv\\Scripts\\python.exe gemini_cli.py")
-    print("   .\\gemini.bat \"Your prompt here\"")
+    print("   .venv\\Scripts\\python.exe main.py")
     return True
 
 
