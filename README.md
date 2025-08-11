@@ -60,7 +60,7 @@ Type your prompt and press Ctrl+D to send.
 
 #### Pipe Input
 ```bash
-echo "What is the capital of France?" | python3 main.py
+echo "What is the capital of Philippines?" | python3 main.py
 ```
 
 #### File Input
@@ -135,7 +135,7 @@ Type your prompt and press Ctrl+Z then Enter to send.
 
 #### Pipe Input
 ```powershell
-echo "What is the capital of France?" | python main.py
+echo "What is the capital of Philippines?" | python main.py
 ```
 
 #### File Input
@@ -162,6 +162,24 @@ python test_env.py
 # Test the app
 echo "Hello, Gemini!" | python main.py
 ```
+
+---
+
+## Using the google-generativeai (genai) package
+
+You can use the official Google Gemini Python package instead of the default requests backend.
+
+### Install the package (in your venv or globally):
+```sh
+pip install google-generativeai
+```
+
+### Usage with --use-genai flag:
+```sh
+python main.py --use-genai --prompt "What is the capital of Philippines?"
+```
+
+If you do not provide `--prompt`, the script will read from stdin as before.
 
 ---
 
