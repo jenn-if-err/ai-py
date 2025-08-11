@@ -39,13 +39,17 @@ This app uses the Google Gemini 1.5 Flash model via the REST API endpoint:
 3. Install dependencies system-wide (no venv):
    ```bash
    sudo apt update
-   sudo apt install python3 python3-pip python3-requests
+   sudo apt install python3 python3-pip python3-venv python3-requests
    ```
    Or, if you prefer a virtual environment:
    ```bash
-   python3 -m venv .venv-wsl
-   source .venv-wsl/bin/activate
+   python3 -m venv .venv
+   source .venv/bin/activate
    pip install requests
+   ```
+4. (Optional) To use the google-generativeai (genai) package:
+   ```bash
+   pip install google-generativeai
    ```
 
 ---
@@ -116,11 +120,19 @@ echo "Hello, Gemini!" | python3 main.py
    # Permanent
    [Environment]::SetEnvironmentVariable("GEMINI_API_KEY", "your_api_key_here", "User")
    ```
-3. Install dependencies:
+3. Install dependencies system-wide (no venv):
    ```powershell
    pip install requests
-   # Or if using a venv:
-   .\.venv\Scripts\python.exe -m pip install requests
+   ```
+   Or, if you prefer a virtual environment:
+   ```powershell
+   python -m venv .venv
+   .\.venv\Scripts\Activate.ps1
+   pip install requests
+   ```
+4. (Optional) To use the google-generativeai (genai) package:
+   ```powershell
+   pip install google-generativeai
    ```
 
 ---
@@ -165,18 +177,10 @@ echo "Hello, Gemini!" | python main.py
 
 ---
 
-## Using the google-generativeai (genai) package
-
-You can use the official Google Gemini Python package instead of the default requests backend.
-
-### Install the package (in your venv or globally):
-```sh
-pip install google-generativeai
-```
 
 ### Usage with --use-genai flag:
 ```sh
-python main.py --use-genai --prompt "What is the capital of Philippines?"
+python3 main.py --use-genai --prompt "What is the capital of Philippines?"
 ```
 
 If you do not provide `--prompt`, the script will read from stdin as before.
