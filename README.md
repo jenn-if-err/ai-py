@@ -1,9 +1,12 @@
-A Python CLI application that sends prompts to the Google Gemini AI API and displays the responses.
+# ai-py
+
+A Python CLI application that sends prompts to Google Gemini and OpenAI (ChatGPT) APIs and displays the responses.
 
 ## Features
 
-- Reads prompts from stdin
-- Sends requests to Gemini AI API via HTTPS
+- Reads prompts from stdin or --prompt flag
+- Sends requests to Gemini AI API or OpenAI ChatGPT API
+- Supports both REST and google-generativeai (genai) backends for Gemini
 - Displays formatted AI responses
 
 ---
@@ -11,16 +14,24 @@ A Python CLI application that sends prompts to the Google Gemini AI API and disp
 ## Prerequisites
 
 1. Python 3.6 or higher
-2. A Google AI Studio API key for Gemini
-3. The `requests` library
+2. A Google AI Studio API key for Gemini (for Gemini usage)
+3. An OpenAI API key (for ChatGPT usage)
+4. The `requests` library
 
 ## API Information
 
-This app uses the Google Gemini 1.5 Flash model via the REST API endpoint:
+### Gemini API
+Uses the Google Gemini 1.5 Flash model via the REST API endpoint:
 - Endpoint: `https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash:generateContent`
 - Method: POST
 - Authentication: API key as query parameter
 - Content-Type: application/json
+
+### OpenAI API
+Uses the OpenAI ChatGPT API (gpt-3.5-turbo by default):
+- Endpoint: `https://api.openai.com/v1/chat/completions`
+- Method: POST
+- Authentication: Bearer token via `OPENAI_API_KEY` environment variable
 
 ---
 
@@ -28,13 +39,13 @@ This app uses the Google Gemini 1.5 Flash model via the REST API endpoint:
 ## Setup
 
 1. Get your Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Set the environment variable:
+2. Set the environment variables:
    ```bash
-   # Temporary (current session)
-   export GEMINI_API_KEY="your_api_key_here"
-   # Permanent
-   echo 'export GEMINI_API_KEY="your_api_key_here"' >> ~/.bashrc
-   source ~/.bashrc
+   # Gemini (Google)
+   export GEMINI_API_KEY="your_gemini_api_key_here"
+   # OpenAI
+   export OPENAI_API_KEY="your_openai_api_key_here"
+   # To make permanent, add to ~/.bashrc or ~/.zshrc
    ```
 3. Install dependencies system-wide (no venv):
    ```bash
@@ -62,6 +73,11 @@ python3 main.py --prompt "What is the capital of Philippines?"
 ```
 Type your prompt and press Ctrl+D to send.
 
+#### Use OpenAI ChatGPT
+```bash
+python3 main.py --use-chatgpt --prompt "What is the capital of Philippines?"
+```
+
 #### Pipe Input
 ```bash
 echo "What is the capital of Philippines?" | python3 main.py
@@ -72,7 +88,7 @@ echo "What is the capital of Philippines?" | python3 main.py
 cat prompt.txt | python3 main.py
 ```
 
-#### Using the Bash Script
+#### Using the Bash Script (Gemini only)
 ```bash
 chmod +x gemini.sh
 ./gemini.sh "What is machine learning?"
@@ -82,8 +98,10 @@ chmod +x gemini.sh
 
 ## Examples
 ```bash
-# Simple question
+# Simple question (Gemini)
 echo "Explain quantum computing in simple terms" | python3 main.py
+# Simple question (OpenAI)
+echo "Explain quantum computing in simple terms" | python3 main.py --use-chatgpt
 # Analysis
 cat data.txt | python3 main.py
 # Multiple lines
@@ -93,19 +111,21 @@ Write a Python script that:
 2. Performs basic data analysis
 3. Creates visualizations
 EOF
-# Using bash script
+# Using bash script (Gemini only)
 ./gemini.sh "What are the latest trends in AI?"
 ```
 
 ---
-
 ##  Testing
 ```bash
 # Test environment
 chmod +x test_env_wsl.sh
 ./test_env_wsl.sh
 # Test the app
-echo "Hello, Gemini!" | python3 main.py
+# Gemini
+ echo "Hello, Gemini!" | python3 main.py
+# OpenAI
+ echo "Hello, OpenAI!" | python3 main.py --use-chatgpt
 ```
 
 ---
@@ -113,12 +133,14 @@ echo "Hello, Gemini!" | python3 main.py
 ##  Setup
 
 1. Get your Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
-2. Set the environment variable:
+2. Set the environment variables:
    ```powershell
-   # Temporary (current session)
-   $env:GEMINI_API_KEY="your_api_key_here"
-   # Permanent
-   [Environment]::SetEnvironmentVariable("GEMINI_API_KEY", "your_api_key_here", "User")
+   # Gemini (Google)
+   $env:GEMINI_API_KEY="your_gemini_api_key_here"
+   [Environment]::SetEnvironmentVariable("GEMINI_API_KEY", "your_gemini_api_key_here", "User")
+   # OpenAI
+   $env:OPENAI_API_KEY="your_openai_api_key_here"
+   [Environment]::SetEnvironmentVariable("OPENAI_API_KEY", "your_openai_api_key_here", "User")
    ```
 3. Install dependencies system-wide (no venv):
    ```powershell
@@ -141,9 +163,14 @@ echo "Hello, Gemini!" | python3 main.py
 
 #### Interactive Mode
 ```powershell
-python main.py
+python main.py --prompt "What is the capital of Philippines?"
 ```
 Type your prompt and press Ctrl+Z then Enter to send.
+
+#### Use OpenAI ChatGPT
+```powershell
+python main.py --use-chatgpt --prompt "What is the capital of Philippines?"
+```
 
 #### Pipe Input
 ```powershell
@@ -159,8 +186,10 @@ Get-Content prompt.txt | python main.py
 
 ## Examples
 ```powershell
-# Simple question
+# Simple question (Gemini)
 echo "Explain quantum computing in simple terms" | python main.py
+# Simple question (OpenAI)
+echo "Explain quantum computing in simple terms" | python main.py --use-chatgpt
 # Analysis
 Get-Content data.txt | python main.py
 ```
@@ -172,18 +201,24 @@ Get-Content data.txt | python main.py
 # Test environment
 python test_env.py
 # Test the app
+# Gemini
 echo "Hello, Gemini!" | python main.py
+# OpenAI
+echo "Hello, OpenAI!" | python main.py --use-chatgpt
 ```
 
 ---
 
 
-### Usage with --use-genai flag:
+### Usage with --use-genai flag (Gemini only):
 ```sh
 python3 main.py --use-genai --prompt "What is the capital of Philippines?"
 ```
 
-If you do not provide `--prompt`, the script will read from stdin as before.
+### Usage with --use-chatgpt flag (OpenAI):
+```sh
+python3 main.py --use-chatgpt --prompt "What is the capital of Philippines?"
+```
 
----
+If you do not provide `--prompt`, the script will read from stdin as before.
 
