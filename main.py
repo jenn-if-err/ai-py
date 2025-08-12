@@ -246,7 +246,7 @@ def main():
 
     if args.use_chatgpt:
         response = send_prompt_to_chatgpt(prompt, api_key, context)
-    elif args.use_genai or args.use_context:
+    elif args.use_genai:
         response = send_prompt_to_gemini_genai(prompt, api_key, context, use_system_instruction=use_system_instruction)
     else:
         response = send_prompt_to_gemini_requests(prompt, api_key, context, use_system_instruction=use_system_instruction)
