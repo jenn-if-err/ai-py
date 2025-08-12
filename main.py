@@ -121,9 +121,15 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, 
         messages = []
         if use_system_instruction:
             messages.append({"role": "user", "parts": [system_instruction]})
-        if context:
-            messages.append({"role": "user", "parts": [context]})
-        messages.append({"role": "user", "parts": [prompt]})
+            if context:
+                messages.append({"role": "user", "parts": [context]})
+            # No prompt in use-context mode
+        else:
+            # Ordinary prompt mode: just context and prompt
+            if context:
+                messages.append({"role": "user", "parts": [context]})
+            if prompt:
+                messages.append({"role": "user", "parts": [prompt]})
         response = model.generate_content(messages)
         if hasattr(response, 'text'):
             return response.text
@@ -211,12 +217,14 @@ def main():
 
     context = None
     prompt = None
+    use_system_instruction = False
     if args.use_context:
         context = read_context_file('context.txt')
         if context is None:
             print("Error: context.txt not found or unreadable.", file=sys.stderr)
             sys.exit(1)
-        # No prompt for use-context mode
+        use_system_instruction = True
+        # No prompt in use-context mode
     elif args.prompt is not None:
         prompt = args.prompt.strip()
     else:
@@ -229,11 +237,7 @@ def main():
     if args.use_chatgpt:
         response = send_prompt_to_chatgpt(prompt, api_key, context)
     elif args.use_genai or args.use_context:
-        # For use-context, only send system instruction and context
-        if args.use_context:
-            response = send_prompt_to_gemini_genai("", api_key, context, use_system_instruction=True)
-        else:
-            response = send_prompt_to_gemini_genai(prompt, api_key, context, use_system_instruction=False)
+        response = send_prompt_to_gemini_genai(prompt, api_key, context, use_system_instruction=use_system_instruction)
     else:
         response = send_prompt_to_gemini_requests(prompt, api_key, context)
 
