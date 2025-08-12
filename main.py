@@ -146,7 +146,7 @@ def send_prompt_to_chatgpt(prompt: str, api_key: str, context: str = None) -> Op
         messages.append({"role": "system", "content": context})
     messages.append({"role": "user", "content": prompt})
     payload = {
-        "model": "gpt-3.5-turbo",
+        "model": "gpt-4",
         "messages": messages
     }
     try:
