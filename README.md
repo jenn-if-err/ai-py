@@ -58,7 +58,7 @@ This app uses the Google Gemini 1.5 Flash model via the REST API endpoint:
 
 #### Interactive Mode
 ```bash
-python3 main.py
+python3 main.py --prompt "What is the capital of Philippines?"
 ```
 Type your prompt and press Ctrl+D to send.
 

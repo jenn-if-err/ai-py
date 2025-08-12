@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Cross-platform setup script for Gemini CLI App
+Cross-platform setup script for ai-py
 Works on Windows PowerShell, WSL Ubuntu, and native Linux/macOS
 """
 
@@ -183,7 +183,7 @@ def print_api_key_instructions(env_type):
 
 def main():
     """Main setup function"""
-    print("Gemini CLI App Setup")
+    print("ai-py Setup")
     print("=" * 50)
     
     # Detect environment
@@ -205,7 +205,7 @@ def main():
             print_api_key_instructions(env_type)
             print("\nDon't forget to set your API key before using the app!")
         else:
-            print("\nYou're ready to use the Gemini CLI app!")
+            print("\nYou're ready to use the ai-py app!")
             
         print(f"\nSee README.md for detailed usage instructions")
     else:

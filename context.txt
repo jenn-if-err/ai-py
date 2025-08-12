@@ -1,0 +1,379 @@
+Team: Ripple Team
+Date: August 11, 2025
+
+Here's a summary of the Ripple Team team's activity, based on the provided data.
+
+**jethrojohn.parker@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+The user's name is Jethro John and their primary email is jethrojohn.parker@alphaus.cloud.
+The date to summarize is Mon, 11 Aug 2025 15:59:00 +0000.
+
+# The following are their calendar entries for that day:
+- title="[Ripple/WavePro] Standup Meeting", description="", started=2025-08-11T02:00:00Z
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="info-status_update", user="Jethro John", message: "starting", last_update="2025-08-11 00:51:34.568053 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Jethro John", message: "done", last_update="2025-08-11 10:41:04.948449 +0000 UTC"
+
+## Thread number 3:
+- channel="info-status_update", user="Jethro John", message: "break", last_update="2025-08-11 05:07:58.314844 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+No GitHub activity found.
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
+**cristopher.apoyon@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+The user's name is Cristopher and their primary email is cristopher.apoyon@alphaus.cloud.
+The date to summarize is Mon, 11 Aug 2025 15:59:00 +0000.
+
+# The following are their calendar entries for that day:
+- title="[Ripple/WavePro] Standup Meeting", description="", started=2025-08-11T02:00:00Z
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="info-status_update", user="Cristopher", message: "starting", last_update="2025-08-11 00:54:07.528041 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Cristopher", message: "back", last_update="2025-08-11 06:46:17.631329 +0000 UTC"
+
+## Thread number 3:
+- channel="info-status_update", user="Cristopher", message: "lunch", last_update="2025-08-11 04:03:32.814048 +0000 UTC"
+
+## Thread number 4:
+- channel="info-status_update", user="Cristopher", message: "done for today", last_update="2025-08-11 11:36:32.336998 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+No GitHub activity found.
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
+**nika.amorin@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+The user's name is Nika and their primary email is nika.amorin@alphaus.cloud.
+The date to summarize is Mon, 11 Aug 2025 15:59:00 +0000.
+
+# The following are their calendar entries for that day:
+- title="[Ripple/WavePro] Standup Meeting", description="", started=2025-08-11T02:00:00Z
+- title="Home", description="", started=2025-08-11T00:00:00Z
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="info-status_update", user="Nika", message: "Back", last_update="2025-08-11 05:54:45.314082 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Nika", message: "Lunch", last_update="2025-08-11 05:03:23.665587 +0000 UTC"
+
+## Thread number 3:
+- channel="info-status_update", user="Nika", message: "Starting", last_update="2025-08-11 00:55:37.392116 +0000 UTC"
+
+## Thread number 4:
+- channel="info-status_update", user="Nika", message: "done", last_update="2025-08-11 10:27:46.349179 +0000 UTC"
+
+## Thread number 5:
+- channel="info-status_update", user="Nika", message: "done", last_update="2025-08-11 10:44:21.645342 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+No GitHub activity found.
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
+**henry.hai@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+The user's name is Huy Hai and their primary email is henry.hai@alphaus.cloud.
+The date to summarize is Mon, 11 Aug 2025 15:59:00 +0000.
+
+# The following are their calendar entries for that day:
+- title="Home", description="", started=2025-08-11T00:00:00Z
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="info-status_update", user="Huy Hai", message: "lunch", last_update="2025-08-11 05:59:09.590785 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Huy Hai", message: "done for now", last_update="2025-08-11 09:31:43.151622 +0000 UTC"
+
+## Thread number 3:
+- channel="info-status_update", user="Huy Hai", message: "back", last_update="2025-08-11 06:58:26.214654 +0000 UTC"
+
+## Thread number 4:
+- channel="info-status_update", user="Huy Hai", message: "starting ", last_update="2025-08-11 01:13:55.399501 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+No GitHub activity found.
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
+**jeffrey@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+The user's name is Jeffrey and their primary email is jeffrey@alphaus.cloud.
+The date to summarize is Mon, 11 Aug 2025 15:59:00 +0000.
+
+# The following are their calendar entries for that day:
+- title="[Ripple/WavePro] Standup Meeting", description="", started=2025-08-11T02:00:00Z
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="info-status_update", user="Jeffrey", message: "Starting late today, need to go to the city to take care of something for my social security account.", last_update="2025-08-10 23:15:32.243092 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Jeffrey", message: "Back", last_update="2025-08-11 11:19:52.603111 +0000 UTC"
+
+## Thread number 3:
+- channel="info-status_update", user="Jeffrey", message: "Starting ", last_update="2025-08-11 03:38:17.424433 +0000 UTC"
+
+## Thread number 4:
+- channel="info-status_update", user="Jeffrey", message: "Break", last_update="2025-08-11 07:29:29.999457 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+The user's GitHub name is engrjeprii.
+
+## The following list is a list of their GitHub commits for the input date:
+- repo: "ripple-ui", commit message: "Merge pull request #343 from alphauslabs/bg-sub-routings\n\nFix deployment issue related to billing group subroutes"
+- repo: "ripple-ui", commit message: "Fix weird behavior of cancel button on create billing group"
+- repo: "ripple-ui", commit message: "Fix conflicts"
+- repo: "ripple-ui", commit message: "Fix deployment issues on billing groups sub routes"
+- repo: "ripple-ui", commit message: "Merge pull request #345 from alphauslabs/bg-sub-routings\n\nFix deployment issues on billing groups sub routes"
+- repo: "ripple-ui", commit message: "Pulled dev"
+- repo: "ripple-ui", commit message: "Test bg sub routes issue on delpoyed"
+- repo: "ripple-ui", commit message: "Merge pull request #346 from alphauslabs/bg-sub-routings\n\nTest bg sub routes issue on delpoyed"
+- repo: "ripple-ui", commit message: "Make react-router singel instance"
+- repo: "ripple-ui", commit message: "Merge pull request #347 from alphauslabs/bg-sub-routings\n\nMake react-router singel instance"
+- repo: "ripple-ui", commit message: "Test outlet"
+- repo: "ripple-ui", commit message: "Merge pull request #348 from alphauslabs/bg-sub-routings\n\nTest outlet"
+
+## The following list is a list of their GitHub pull requests for the input date:
+- repo: "ripple-ui", pull request: "Bg sub routings"
+- repo: "ripple-ui", pull request: "Fix weird behavior of cancel button on create billing group"
+- repo: "ripple-ui", pull request: "Fix deployment issues on billing groups sub routes"
+- repo: "ripple-ui", pull request: "Test bg sub routes issue on delpoyed"
+- repo: "ripple-ui", pull request: "Make react-router singel instance"
+- repo: "ripple-ui", pull request: "Test outlet"
+
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
+**tuan@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="team-azure", user="Rena", message: "<@Le Anh Tuan> Have we started Azure calculation?", last_update="2025-08-09 13:13:24.659718 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Sorry that i am away from home until end of tomorrow. I will start the calculation at Sunday night and will do the verification in the Monday morning", last_update="2025-08-09 14:29:49.089828 +0000 UTC"
+- channel="team-azure", user="Rena", message: "ok but from next month, please automate it or assign someone who can start calculation on 9th if it's the fastest timing.", last_update="2025-08-10 02:04:03.269885 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Okay i got it. I have an idea for the automatic checking and starting the calculation process. That would be some good tasks for Ian and Loyd. Will share to them the info soon. cc <@Ian Jay> <@Loyd Vincent> ", last_update="2025-08-10 12:18:40.265447 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Also the manually checking will be shared soon during next week", last_update="2025-08-10 12:19:28.621665 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "I have started calculation batch for iSiD, restarted the billed consumption batch for NTTD (checked there is an issue with data populating) and missing date for Colorkrew (the date their credentials was expired).", last_update="2025-08-10 18:57:35.982417 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Start calculation batch for Colorkrew and NTTD", last_update="2025-08-11 01:18:54.756669 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Hi <@Yo> We have an issue with NTTD invoice from Microsoft, while other MSPs’ invoice have the daily usage data available on Aug 9, but NTTD doesn’t have daily usage for invoice `G105307044` . Could you contact NTTD to contact MS? The invoice info:\n```        {\n            \"id\": \"G105307044\",\n            \"invoiceDate\": \"2025-08-06T00:25:35.1114154Z\",\n            \"billingPeriodStartDate\": \"2025-07-01T00:00:00Z\",\n            \"billingPeriodEndDate\": \"2025-07-31T23:59:59.9999999Z\",\n            \"totalCharges\": 61271112.0,\n            \"paidAmount\": 0.0,\n            \"currencyCode\": \"JPY\",\n            \"currencySymbol\": \"￥\",\n            \"pdfDownloadLink\": \"/invoices/G105307044/documents/statement\",\n            \"invoiceDetails\": [\n                {\n                    \"invoiceLineItemType\": \"billing_line_items\",\n                    \"billingProvider\": \"one_time\",\n                    \"links\": {\n                        \"self\": {\n                            \"uri\": \"/invoices/OneTime-G105307044/lineitems/OneTime/BillingLineItems\",\n                            \"method\": \"GET\",\n                            \"headers\": []\n                        }\n                    },\n                    \"attributes\": {\n                        \"objectType\": \"InvoiceDetail\"\n                    }\n                }\n            ],\n            \"documentType\": \"invoice\",\n            \"state\": \"active\",\n            \"invoiceType\": \"OneTime\",\n            \"links\": {\n                \"self\": {\n                    \"uri\": \"/invoices/OneTime-G105307044\",\n                    \"method\": \"GET\",\n                    \"headers\": []\n                }\n            },\n            \"attributes\": {\n                \"objectType\": \"Invoice\"\n            }\n        },```", last_update="2025-08-11 02:55:05.997943 +0000 UTC"
+- channel="team-azure", user="Yo", message: "Ok! Thanks for informing!! I will check with them", last_update="2025-08-11 02:56:06.833298 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "It should have `usage_line_item` in the `invoiceDetails` :\n```                {\n                    \"invoiceLineItemType\": \"usage_line_items\",\n                    \"billingProvider\": \"marketplace\",\n                    \"links\": {\n                        \"self\": {\n                            \"uri\": \"/invoices/G105309632/lineitems?provider=Marketplace&amp;invoicelineitemtype=UsageLineItems&amp;size=2000\",\n                            \"method\": \"GET\",\n                            \"headers\": []\n                        }\n                    },\n                    \"attributes\": {\n                        \"objectType\": \"InvoiceDetail\"\n                    }```", last_update="2025-08-11 02:56:07.945972 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "No issue with other MSPs", last_update="2025-08-11 02:56:49.048881 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Thank you Yo!", last_update="2025-08-11 02:57:00.428633 +0000 UTC"
+- channel="team-azure", user="Yo", message: "Got it! thanks!", last_update="2025-08-11 03:31:25.800839 +0000 UTC"
+- channel="team-azure", user="Yo", message: "<@Le Anh Tuan> Just to confirm they `G105307044` is the only invoice that does not have data? (Other invoice have data but only this invoice ID do not have data?)", last_update="2025-08-11 04:16:12.884789 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Yes, that is correct. In addition, only this type of data:\n```\"invoiceLineItemType\": \"usage_line_items\",\n\"billingProvider\": \"marketplace\",```\nThat is for daily usage costs", last_update="2025-08-11 04:17:29.302545 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Done the calculation for Colorkrew. Solving the calculation batch error for iSiD <https://alphaus.slack.com/archives/C070RUWQ4DQ/p1754865392855619>", last_update="2025-08-11 04:19:46.43212 +0000 UTC"
+- channel="team-azure", user="Yo", message: "For NTTD it looks like Marketplace data is not available? and other normal usage is ok?\n\nFor Colorkrew I will send confirmation email! thanks! *Btw did they update their credentials?", last_update="2025-08-11 04:32:03.567391 +0000 UTC"
+- channel="team-azure", user="Yo", message: "<@Le Anh Tuan> Do you know which API we use to get those data? I want to inform the detail as much as possible so that MS can find the issue", last_update="2025-08-11 05:05:12.926971 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "To get the invoice info: <https://api.partnercenter.microsoft.com/v1/invoices> (Partner Center API)", last_update="2025-08-11 05:06:06.63976 +0000 UTC"
+- channel="team-azure", user="Yo", message: "Thanks!", last_update="2025-08-11 05:06:17.98505 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "No problem!", last_update="2025-08-11 05:06:38.54997 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "&gt; For NTTD it looks like Marketplace data is not available? and other normal usage is ok?\nAh the marketplace type means for normal daily usage (i am not sure why they use that name, but it contains all type of data, not only marketplace data)", last_update="2025-08-11 05:08:20.098972 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "&gt; For Colorkrew I will send confirmation email! thanks! *Btw did they update their credentials?\nYes, they updated their credentials. I can get invoice line item successfully", last_update="2025-08-11 05:09:46.80345 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "image/png 1754745202.508379/F09A5MVQKU1-Screenshot2025-08-11at12.09.23\u202fPM.png", last_update="2025-08-11 05:09:46.788571 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Deployed and rerunning for company has fee detection error of iSiD", last_update="2025-08-11 07:02:27.340655 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Estimated that i will complete the Colorkrew and iSiD invoice verification within today", last_update="2025-08-11 07:03:23.291087 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "There is an issue of the verification details field in Ripple invoice item, i will continue investigating in the morning", last_update="2025-08-11 18:46:55.378511 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Le Anh Tuan", message: "Break", last_update="2025-08-11 12:10:35.303136 +0000 UTC"
+
+## Thread number 3:
+- channel="info-status_update", user="Le Anh Tuan", message: "Back", last_update="2025-08-11 09:37:17.315847 +0000 UTC"
+
+## Thread number 4:
+- channel="info-status_update", user="Le Anh Tuan", message: "Lunch", last_update="2025-08-11 07:40:50.197848 +0000 UTC"
+
+## Thread number 5:
+- channel="info-status_update", user="Le Anh Tuan", message: "Starting ", last_update="2025-08-11 01:17:04.447282 +0000 UTC"
+
+## Thread number 6:
+- channel="info-status_update", user="Le Anh Tuan", message: "Back", last_update="2025-08-11 14:43:07.710573 +0000 UTC"
+
+## Thread number 7:
+- channel="team-azure", user="Yo", message: "<@Le Anh Tuan> Here’s the file from NTTD!", last_update="2025-08-07 06:19:19.48968 +0000 UTC"
+- channel="team-azure", user="Yo", message: "application/zip 1754547556.822529/F099B52JDHT-20250807_ERPPricing-selected.zip", last_update="2025-08-07 06:19:19.477038 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Okay let me import that", last_update="2025-08-09 14:28:22.06727 +0000 UTC"
+- channel="team-azure", user="Le Anh Tuan", message: "Done", last_update="2025-08-10 18:53:58.553128 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+The user's GitHub name is tuan78.
+
+## The following list is a list of their GitHub commits for the input date:
+- repo: "ouchan", commit message: "feat(azurebatchd): add Savings Plan Fee processor"
+- repo: "ouchan", commit message: "Merge pull request #4945 from mobingilabs/feat/azurebatchd-savingsplan-fee-processor\n\nfeat(azurebatchd): add Savings Plan Fee processor"
+
+## The following list is a list of their GitHub pull requests for the input date:
+- repo: "ouchan", pull request: "feat(azurebatchd): add Savings Plan Fee processor"
+
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
+**kennethharold.panis@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+The user's name is Kenneth Harold and their primary email is kennethharold.panis@alphaus.cloud.
+The date to summarize is Mon, 11 Aug 2025 15:59:00 +0000.
+
+# The following are their calendar entries for that day:
+- title="[Ripple/WavePro] Standup Meeting", description="", started=2025-08-11T02:00:00Z
+- title="Home", description="", started=2025-08-11T00:00:00Z
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="info-status_update", user="Kenneth Harold", message: "Starting work", last_update="2025-08-11 00:55:41.443749 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Kenneth Harold", message: "done", last_update="2025-08-11 13:18:54.209344 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+The user's GitHub name is Ephemerish.
+
+## The following list is a list of their GitHub commits for the input date:
+- repo: "ripple-ui", commit message: "feat: Implement authentication type validation and error handling across services"
+
+## The following list is a list of their GitHub pull requests for the input date:
+- repo: "ripple-ui", pull request: "Implement authentication type validation and error handling/Introduce validation for authentication types across services, enhancing error handling for unauthorized access and invalid configurations. This change improves user experience by triggering appropriate logout procedures and clearing authentication data when invalid types are detected."
+
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
+**ivangabriel.santos@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+The user's name is Ivan Gabriel and their primary email is ivangabriel.santos@alphaus.cloud.
+The date to summarize is Mon, 11 Aug 2025 15:59:00 +0000.
+
+# The following are their calendar entries for that day:
+- title="[Ripple/WavePro] Standup Meeting", description="", started=2025-08-11T02:00:00Z
+- title="Home", description="", started=2025-08-11T00:00:00Z
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="info-status_update", user="Ivan Gabriel", message: "back", last_update="2025-08-11 05:06:14.83937 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Ivan Gabriel", message: "starting at 9, forgot to update", last_update="2025-08-11 01:58:02.130894 +0000 UTC"
+
+## Thread number 3:
+- channel="info-status_update", user="Ivan Gabriel", message: "done for today", last_update="2025-08-11 11:21:33.416787 +0000 UTC"
+
+## Thread number 4:
+- channel="info-status_update", user="Ivan Gabriel", message: "lunch", last_update="2025-08-11 04:04:39.754861 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+The user's GitHub name is ivangabrielsantos27.
+
+## The following list is a list of their GitHub commits for the input date:
+- repo: "flow-ui", commit message: "Merge pull request #51 from alphauslabs/dev\n\nmerge: DEV to NEXT release"
+- repo: "flow-ui", commit message: "Merge pull request #52 from alphauslabs/dev\n\nmerge: DEV to PROD release"
+
+## The following list is a list of their GitHub pull requests for the input date:
+- repo: "flow-ui", pull request: "merge: DEV to NEXT release"
+- repo: "flow-ui", pull request: "merge: DEV to PROD release"
+
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
+**rico.batistis@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+The user's name is Rico and their primary email is rico.batistis@alphaus.cloud.
+The date to summarize is Mon, 11 Aug 2025 15:59:00 +0000.
+
+# The following are their calendar entries for that day:
+- title="[Ripple/WavePro] Standup Meeting", description="", started=2025-08-11T02:00:00Z
+- title="Home", description="", started=2025-08-11T00:00:00Z
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="team-cs", user="Yo", message: "<@Rico>\nPlease update adjustment entry items:pray:\n<https://docs.google.com/spreadsheets/d/1W4TI3BCKC7G6QUaLMKnOWKX6M7K4FwQHrW6iq76zMys/edit?gid=1042294417#gid=1042294417>", last_update="2025-08-11 00:00:11.428749 +0000 UTC"
+- channel="team-cs", user="Rico", message: "done", last_update="2025-08-11 00:06:35.533823 +0000 UTC"
+- channel="team-cs", user="Yo", message: "Thanks!", last_update="2025-08-11 04:37:01.812997 +0000 UTC"
+- channel="team-cs", user="Yo", message: "Sent confirmation email", last_update="2025-08-11 04:37:49.209891 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Rico", message: "starting", last_update="2025-08-11 00:00:52.691969 +0000 UTC"
+
+## Thread number 3:
+- channel="info-status_update", user="Rico", message: "done", last_update="2025-08-11 09:35:56.620282 +0000 UTC"
+
+## Thread number 4:
+- channel="info-status_update", user="Rico", message: "break", last_update="2025-08-11 05:11:19.592521 +0000 UTC"
+
+## Thread number 5:
+- channel="info-status_update", user="Rico", message: "back", last_update="2025-08-11 05:55:22.955008 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+No GitHub activity found.
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
+**emma@alphaus.cloud:**
+Context:
+# The following section is the user's Google Workspace activities.
+If any calendar entry shows 'Out of Office', 'OOO', 'leave', 'flex', or 'vacation', do not mention any other calendar events. Only state, in a formal tone, that the user had a day off or was on leave. Use only the exact phrase 'had a day off' or 'was on leave'. Do not use any other wording such as 'out of the office' or similar. Do not include any other details about meetings or calendar events for that day.
+The user's name is Emma  and their primary email is emma@alphaus.cloud.
+The date to summarize is Mon, 11 Aug 2025 15:59:00 +0000.
+
+# The following are their calendar entries for that day:
+- title="[Ripple/WavePro] Standup Meeting", description="", started=2025-08-11T02:00:00Z
+
+# The following section is the user's chat history from Slack. Each thread (numbered) section contains the messages the user was involved in. Take note of the last_updated timestamps and state when did the worker started and ended their work, time is in UTC so convert them to JST.
+
+## Thread number 1:
+- channel="info-status_update", user="Emma ", message: "starting", last_update="2025-08-11 00:57:07.871283 +0000 UTC"
+
+## Thread number 2:
+- channel="info-status_update", user="Emma ", message: "lunch", last_update="2025-08-11 04:25:57.412639 +0000 UTC"
+
+## Thread number 3:
+- channel="info-status_update", user="Emma ", message: "back", last_update="2025-08-11 05:30:11.272275 +0000 UTC"
+
+## Thread number 4:
+- channel="info-status_update", user="Emma ", message: "break, will continue this evening", last_update="2025-08-11 08:14:30.7032 +0000 UTC"
+
+# The following section is the user's activities in GitHub.
+No GitHub activity found.
+# The following section is the user's activities in ClickUp.
+ClickUp activity not available.
+
