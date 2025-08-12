@@ -119,13 +119,12 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None) 
     try:
         model = genai.GenerativeModel('gemini-2.0-flash-001')
         messages = []
+        # Prepend system instruction as the first message
+        messages.append({"role": "user", "parts": [system_instruction]})
         if context:
             messages.append({"role": "user", "parts": [context]})
         messages.append({"role": "user", "parts": [prompt]})
-        response = model.generate_content(
-            messages,
-            system_instruction=system_instruction
-        )
+        response = model.generate_content(messages)
         if hasattr(response, 'text'):
             return response.text
         print("Error: Unexpected response format from genai package", file=sys.stderr)
