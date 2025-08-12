@@ -51,12 +51,13 @@ Uses the OpenAI ChatGPT API (gpt-3.5-turbo by default):
    ```bash
    sudo apt update
    sudo apt install python3 python3-pip python3-venv python3-requests
+   pip install openai
    ```
    Or, if you prefer a virtual environment:
    ```bash
    python3 -m venv .venv
    source .venv/bin/activate
-   pip install requests
+   pip install requests openai
    ```
 4. (Optional) To use the google-generativeai (genai) package:
    ```bash
@@ -144,13 +145,13 @@ chmod +x test_env_wsl.sh
    ```
 3. Install dependencies system-wide (no venv):
    ```powershell
-   pip install requests
+   pip install requests openai
    ```
    Or, if you prefer a virtual environment:
    ```powershell
    python -m venv .venv
    .\.venv\Scripts\Activate.ps1
-   pip install requests
+   pip install requests openai
    ```
 4. (Optional) To use the google-generativeai (genai) package:
    ```powershell
