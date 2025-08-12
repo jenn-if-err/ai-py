@@ -108,14 +108,13 @@ def send_prompt_to_gemini_requests(prompt: str, api_key: str, context: str = Non
 
 
 def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, use_system_instruction: bool = False) -> Optional[str]:
-    """Send a prompt to the Gemini API using the new google-generativeai Client API and return the response"""
+    """Send a prompt to the Gemini API using the new google import genai Client API and return the response"""
     try:
-        import google.generativeai as genai
+        from google import genai
     except ImportError:
         print("Error: google-generativeai package is not installed. Please install it with 'pip install google-generativeai'", file=sys.stderr)
         return None
 
-    # The new API uses the GEMINI_API_KEY environment variable automatically
     system_instruction = (
         "You are an experienced psychologist, helping businesses understand their employees' behavior in terms of work and productivity. "
         "You are also an experienced project manager in the software development field for a long time, providing consultations on how to make software teams more productive. "
@@ -134,17 +133,14 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, 
             contents.append(system_instruction)
             if context:
                 contents.append(context)
-            # No prompt in use-context mode
         else:
             if context:
                 contents.append(context)
             if prompt:
                 contents.append(prompt)
         response = client.models.generate_content(model=model, contents=contents)
-        # The new API returns a response with a 'text' attribute
         if hasattr(response, 'text'):
             return response.text
-        # Fallback: try to get the result as string
         if hasattr(response, 'result'):
             return str(response.result)
         print("Error: Unexpected response format from genai Client API", file=sys.stderr)
