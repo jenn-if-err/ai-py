@@ -210,17 +210,18 @@ def main():
         sys.exit(1)
 
     context = None
+    prompt = None
     if args.use_context:
         context = read_context_file('context.txt')
         if context is None:
             print("Error: context.txt not found or unreadable.", file=sys.stderr)
             sys.exit(1)
-        prompt = "Summarize the team's activities."
+        # No prompt for use-context mode
     elif args.prompt is not None:
         prompt = args.prompt.strip()
     else:
         prompt = read_prompt_from_stdin()
-    if not prompt:
+    if not args.use_context and not prompt:
         sys.exit(1)
 
     print("Sending prompt to AI...", file=sys.stderr)
@@ -228,7 +229,11 @@ def main():
     if args.use_chatgpt:
         response = send_prompt_to_chatgpt(prompt, api_key, context)
     elif args.use_genai or args.use_context:
-        response = send_prompt_to_gemini_genai(prompt, api_key, context, use_system_instruction=args.use_context)
+        # For use-context, only send system instruction and context
+        if args.use_context:
+            response = send_prompt_to_gemini_genai("", api_key, context, use_system_instruction=True)
+        else:
+            response = send_prompt_to_gemini_genai(prompt, api_key, context, use_system_instruction=False)
     else:
         response = send_prompt_to_gemini_requests(prompt, api_key, context)
 
