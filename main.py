@@ -151,7 +151,15 @@ def send_prompt_to_chatgpt(prompt: str, api_key: str, context: str = None) -> Op
     }
     try:
         response = requests.post(url, headers=headers, json=payload, timeout=30)
-        response.raise_for_status()
+        try:
+            response.raise_for_status()
+        except requests.exceptions.HTTPError as http_err:
+            print(f"Error making request to OpenAI API: {http_err}", file=sys.stderr)
+            try:
+                print(f"OpenAI API response: {response.text}", file=sys.stderr)
+            except Exception:
+                pass
+            return None
         data = response.json()
         if "choices" in data and len(data["choices"]) > 0:
             return data["choices"][0]["message"]["content"]
