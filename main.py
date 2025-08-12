@@ -97,7 +97,7 @@ def send_prompt_to_gemini_requests(prompt: str, api_key: str, context: str = Non
         return None
 
 
-def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None) -> Optional[str]:
+def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, use_system_instruction: bool = False) -> Optional[str]:
     """Send a prompt to the Gemini API using google-generativeai and return the response"""
     try:
         import google.generativeai as genai
@@ -119,8 +119,8 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None) 
     try:
         model = genai.GenerativeModel('gemini-2.0-flash-001')
         messages = []
-        # Prepend system instruction as the first message
-        messages.append({"role": "user", "parts": [system_instruction]})
+        if use_system_instruction:
+            messages.append({"role": "user", "parts": [system_instruction]})
         if context:
             messages.append({"role": "user", "parts": [context]})
         messages.append({"role": "user", "parts": [prompt]})
@@ -228,7 +228,7 @@ def main():
     if args.use_chatgpt:
         response = send_prompt_to_chatgpt(prompt, api_key, context)
     elif args.use_genai or args.use_context:
-        response = send_prompt_to_gemini_genai(prompt, api_key, context)
+        response = send_prompt_to_gemini_genai(prompt, api_key, context, use_system_instruction=args.use_context)
     else:
         response = send_prompt_to_gemini_requests(prompt, api_key, context)
 
