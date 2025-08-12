@@ -104,7 +104,7 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None) 
     except ImportError:
         print("Error: google-generativeai package is not installed. Please install it with 'pip install google-generativeai'", file=sys.stderr)
         return None
-    
+
     genai.configure(api_key=api_key)
     system_instruction = (
         "You are an experienced psychologist, helping businesses understand their employees' behavior in terms of work and productivity. "
@@ -118,15 +118,14 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None) 
     )
     try:
         model = genai.GenerativeModel('gemini-2.0-flash-001')
-        response = model.generate_content([
-            genai.Content(
-                parts=[genai.Text(context)] if context else []
-            ),
-            genai.Content(
-                parts=[genai.Text(prompt)]
-            )
-        ],
-        system_instruction=system_instruction)
+        messages = []
+        if context:
+            messages.append({"role": "user", "parts": [context]})
+        messages.append({"role": "user", "parts": [prompt]})
+        response = model.generate_content(
+            messages,
+            system_instruction=system_instruction
+        )
         if hasattr(response, 'text'):
             return response.text
         print("Error: Unexpected response format from genai package", file=sys.stderr)
