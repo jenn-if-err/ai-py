@@ -79,13 +79,13 @@ def main():
                 print("Goodbye!")
                 break
             history.append({"role": "user", "content": user_input})
-            print("AI: ...", end="\r")
+            print("ChatGPT: ...", end="\r")
             response = chatgpt_chat(history, api_key)
             if response:
-                print(f"AI: {response}")
+                print(f"ChatGPT: {response}")
                 history.append({"role": "assistant", "content": response})
             else:
-                print("AI: [No response]")
+                print("ChatGPT: [No response]")
     else:
         api_key = get_gemini_api_key()
         if not api_key:
@@ -97,13 +97,13 @@ def main():
                 print("Goodbye!")
                 break
             history.append(user_input)
-            print("AI: ...", end="\r")
+            print("Gemini: ...", end="\r")
             response = gemini_chat(history, api_key)
             if response:
-                print(f"AI: {response}")
+                print(f"Gemini: {response}")
                 history.append(response)
             else:
-                print("AI: [No response]")
+                print("Gemini: [No response]")
 
 if __name__ == "__main__":
     main()
