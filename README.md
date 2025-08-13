@@ -64,7 +64,7 @@ A Python CLI application for interacting with Google Gemini and OpenAI (ChatGPT)
      ```
 5. (Optional) For Gemini package backend:
    ```powershell
-   pip install google-generativeai
+   pip install -q -U google-genai
    ```
 
 ---
