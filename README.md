@@ -28,18 +28,15 @@ A Python CLI application for interacting with Google Gemini and OpenAI (ChatGPT)
      ```bash
      sudo apt update
      sudo apt install python3 python3-pip python3-venv python3-requests
-     pip install requests openai
      ```
-   - Or, using a virtual environment:
+   - Use a virtual environment:
      ```bash
      python3 -m venv .venv
      source .venv/bin/activate
-     pip install requests openai
+     pip install requests openai 
+     pip install -q -U google-genai
+
      ```
-5. (Optional) For Gemini package backend:
-   ```bash
-   pip install google-generativeai
-   ```
 
 ## Windows
 1. Get your Gemini API key from [Google AI Studio](https://makersuite.google.com/app/apikey)
