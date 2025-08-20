@@ -107,7 +107,6 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, 
         print("Error: google-generativeai package is not installed. Please install it with 'pip install google-generativeai'", file=sys.stderr)
         return None
 
-    # Always configure the API key (safe to call multiple times)
     genai.configure(api_key=api_key)
 
     system_instruction = (
@@ -121,13 +120,11 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, 
         "Do not address your response to the user themselves, but to someone else generic. The generated report must be in HTML do not use markdown or plain text formatting. Don't include a header."
     )
     try:
-        # Use the recommended high-level API
         model = genai.GenerativeModel(
             model_name="gemini-2.0-flash-001",
             system_instruction=system_instruction if use_system_instruction else None
         )
 
-        # Combine context and prompt into a single message for clarity
         full_prompt = []
         if context:
             full_prompt.append("Context:\n" + context)
