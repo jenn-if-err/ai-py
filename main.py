@@ -100,12 +100,15 @@ def send_prompt_to_gemini_requests(prompt: str, api_key: str, context: str = Non
 
 
 def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, use_system_instruction: bool = False) -> Optional[str]:
-    """Send a prompt to the Gemini API using the new google import genai Client API and return the response"""
+    """Send a prompt to the Gemini API using google-generativeai (best practice) and return the response"""
     try:
-        from google import genai
+        import google.generativeai as genai
     except ImportError:
         print("Error: google-generativeai package is not installed. Please install it with 'pip install google-generativeai'", file=sys.stderr)
         return None
+
+    # Always configure the API key (safe to call multiple times)
+    genai.configure(api_key=api_key)
 
     system_instruction = (
         "You are an experienced psychologist, helping businesses understand their employees' behavior in terms of work and productivity. "
@@ -118,27 +121,29 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, 
         "Do not address your response to the user themselves, but to someone else generic. The generated report must be in HTML do not use markdown or plain text formatting. Don't include a header."
     )
     try:
-        client = genai.Client()
-        model = "gemini-2.0-flash-001"
-        contents = []
-        if use_system_instruction:
-            contents.append(system_instruction)
-            if context:
-                contents.append(context)
-        else:
-            if context:
-                contents.append(context)
-            if prompt:
-                contents.append(prompt)
-        response = client.models.generate_content(model=model, contents=contents)
+        # Use the recommended high-level API
+        model = genai.GenerativeModel(
+            model_name="gemini-2.0-flash-001",
+            system_instruction=system_instruction if use_system_instruction else None
+        )
+
+        # Combine context and prompt into a single message for clarity
+        full_prompt = []
+        if context:
+            full_prompt.append("Context:\n" + context)
+        if prompt:
+            full_prompt.append(prompt)
+        final_content = "\n\n".join(full_prompt)
+
+        response = model.generate_content(final_content)
         if hasattr(response, 'text'):
             return response.text
         if hasattr(response, 'result'):
             return str(response.result)
-        print("Error: Unexpected response format from genai Client API", file=sys.stderr)
+        print("Error: Unexpected response format from genai GenerativeModel API", file=sys.stderr)
         return None
     except Exception as e:
-        print(f"Error using google-generativeai Client API: {e}", file=sys.stderr)
+        print(f"Error using google-generativeai GenerativeModel API: {e}", file=sys.stderr)
         return None
 
 
