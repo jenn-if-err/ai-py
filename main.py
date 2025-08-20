@@ -54,11 +54,11 @@ def send_prompt_to_gemini_requests(prompt: str, api_key: str, context: str = Non
         "Do not address your response to the user themselves, but to someone else generic. The generated report must be in HTML do not use markdown or plain text formatting. Don't include a header."
     )
     if use_system_instruction:
-        # Google-recommended: system instruction and context as separate messages in 'contents'
+        # REST API: system instruction and context as separate messages, only 'parts' (no 'role')
         contents = []
-        contents.append({"role": "system", "parts": [{"text": system_instruction}]})
+        contents.append({"parts": [{"text": system_instruction}]})
         if context:
-            contents.append({"role": "user", "parts": [{"text": context}]})
+            contents.append({"parts": [{"text": context}]})
         payload = {
             "contents": contents
         }
@@ -122,14 +122,14 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, 
         model = "gemini-2.0-flash-001"
         contents = []
         if use_system_instruction:
-            contents.append(system_instruction)
+            contents.append({"role": "system", "parts": [system_instruction]})
             if context:
-                contents.append(context)
+                contents.append({"role": "user", "parts": [context]})
         else:
             if context:
-                contents.append(context)
+                contents.append({"role": "user", "parts": [context]})
             if prompt:
-                contents.append(prompt)
+                contents.append({"role": "user", "parts": [prompt]})
         response = client.models.generate_content(model=model, contents=contents)
         if hasattr(response, 'text'):
             return response.text
@@ -238,6 +238,8 @@ def main():
 
     if args.use_chatgpt:
         response = send_prompt_to_chatgpt(prompt, api_key, context)
+    elif args.use_context:
+        response = send_prompt_to_gemini_genai(prompt, api_key, context, use_system_instruction=use_system_instruction)
     elif args.use_genai:
         response = send_prompt_to_gemini_genai(prompt, api_key, context, use_system_instruction=use_system_instruction)
     else:
