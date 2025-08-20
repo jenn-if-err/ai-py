@@ -122,14 +122,14 @@ def send_prompt_to_gemini_genai(prompt: str, api_key: str, context: str = None, 
         model = "gemini-2.0-flash-001"
         contents = []
         if use_system_instruction:
-            contents.append({"role": "system", "parts": [system_instruction]})
+            contents.append(system_instruction)
             if context:
-                contents.append({"role": "user", "parts": [context]})
+                contents.append(context)
         else:
             if context:
-                contents.append({"role": "user", "parts": [context]})
+                contents.append(context)
             if prompt:
-                contents.append({"role": "user", "parts": [prompt]})
+                contents.append(prompt)
         response = client.models.generate_content(model=model, contents=contents)
         if hasattr(response, 'text'):
             return response.text
