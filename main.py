@@ -54,21 +54,13 @@ def send_prompt_to_gemini_requests(prompt: str, api_key: str, context: str = Non
         "Do not address your response to the user themselves, but to someone else generic. The generated report must be in HTML do not use markdown or plain text formatting. Don't include a header."
     )
     if use_system_instruction:
-        # Only send system instruction and context
-        parts = []
+        # Google-recommended: system instruction and context as separate messages in 'contents'
+        contents = []
+        contents.append({"role": "system", "parts": [{"text": system_instruction}]})
         if context:
-            parts.append({"text": context})
+            contents.append({"role": "user", "parts": [{"text": context}]})
         payload = {
-            "systemInstruction": {
-                "parts": [
-                    {"text": system_instruction}
-                ]
-            },
-            "contents": [
-                {
-                    "parts": parts
-                }
-            ]
+            "contents": contents
         }
     else:
         # Ordinary prompt mode: just context and prompt
