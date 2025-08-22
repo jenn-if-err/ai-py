@@ -1,6 +1,6 @@
 # ai-py
 
-A Python CLI application for interacting with Google Gemini and OpenAI (ChatGPT) APIs. Supports both single-prompt and interactive chatbot modes.
+A Python CLI application for interacting with Google Gemini and OpenAI (ChatGPT) APIs used for testing vortex tracing agent at https://github.com/flowerinthenight/vortex-agent.git
 
 ---
 
