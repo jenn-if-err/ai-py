@@ -31,12 +31,12 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
-        # Print loaded OpenSSL library paths from /proc/self/maps
-        print("Loaded OpenSSL libraries:")
-        try:
-            with open("/proc/self/maps") as f:
-                for line in f:
-                    if "ssl" in line and ".so" in line:
-                        print(line.strip())
-        except Exception as e:
-            print(f"Could not read /proc/self/maps: {e}")
+    # Print loaded OpenSSL library paths from /proc/self/maps
+    print("Loaded OpenSSL libraries:")
+    try:
+        with open("/proc/self/maps") as f:
+            for line in f:
+                if "ssl" in line and ".so" in line:
+                    print(line.strip())
+    except Exception as e:
+        print(f"Could not read /proc/self/maps: {e}")
