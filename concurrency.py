@@ -31,3 +31,6 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+    import time
+    print("Sleeping for 60 seconds so you can inspect /proc/<pid>/maps ...")
+    time.sleep(500)
