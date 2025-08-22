@@ -6,10 +6,12 @@ API_KEY = os.getenv('GEMINI_API_KEY')
 if not API_KEY:
     raise RuntimeError('GEMINI_API_KEY environment variable not set')
 
-ENDPOINT = 'https://gemini.googleapis.com/v1beta/models/gemini-pro:generateContent'
+# Use the same endpoint as main.py
+ENDPOINT = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash-001:generateContent'
 HEADERS = {
     'Content-Type': 'application/json',
 }
+
 
 prompt1 = "J" * 5000
 prompt2 = "T" * 5000
